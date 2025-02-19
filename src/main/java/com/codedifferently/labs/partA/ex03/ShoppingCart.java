@@ -16,15 +16,22 @@ public class ShoppingCart {
         // Calculating total cost
         total = (price * quantity) * tax;
 
-
         // Declare outOfStock variable and initialize it
+        boolean outOfStock = false;
 
-
+        if(quantity > 1){
+            response= message +  "\nTotal cost with tax is: " +  total;
+        }
         // Test quantity and modify message if quantity > 1.
+        else if (quantity == 1) {
+            response = message + "\nTotal cost with tax is: " +  total;
+        }else{
+            response = "Ay, listen up, big man. We ain't got the stock so you gonna have to go bome";
+            outOfStock = true;
+        }
 
 
         // Test outOfStock and notify user in either case.
-
 
         return response;
     }

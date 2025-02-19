@@ -1,5 +1,6 @@
 package com.codedifferently.labs.partC;
 
+
 public class AlgoChallenge {
 
       /* Problem 1
@@ -13,8 +14,11 @@ public class AlgoChallenge {
      */
 
     public static Boolean startWithIx(String phrase) {
-
-        return null;
+        if (phrase.contains("ix")) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
      /* Problem 1
@@ -28,9 +32,29 @@ public class AlgoChallenge {
     near10(13, 7) --> 0
      */
 
-    public static Integer near10(int one, int two){
+    public static Integer near10(int one, int two) {
+        int x = Math.abs(one - 10);
+        int y = Math.abs(two - 10);
 
-        return null;
+        if (x < y) {
+            return one;
+        } else if (y < x) {
+            return two;
+        } else {
+            return 0;
+        }
     }
 
+    public static void main(String[] args) {
+        System.out.println(near10(8, 13));
+        System.out.println(near10(13, 8));
+        System.out.println(near10(13, 7));
+
+        System.out.println(startWithIx("mix snacks"));
+        System.out.println(startWithIx("pix snacks"));
+        System.out.println(startWithIx("piz snacks"));
+    }
 }
+
+jo
+

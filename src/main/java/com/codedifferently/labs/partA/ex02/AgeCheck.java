@@ -7,10 +7,10 @@ public class AgeCheck {
         int myAge = 19;   // I am 19; let me see if I can drive yet
 
         if (myAge >= 16) {
-            response += ("I'm old enough to have a driver's license!");
+            response += "I'm old enough to have a driver's license!";
         }
-        if (myAge <= 16) {
-            response += ("I'm not old enough yet... :*(");
+        if (myAge < 16) {
+            response += "I'm not old enough yet... :*( ";
         }
 
 
